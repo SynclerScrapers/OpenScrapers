@@ -78,7 +78,10 @@
         },
         "anime": {
             "query": "/search?q={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('#container table tbody tr.bls-row')",
@@ -163,7 +166,10 @@
         },
         "anime": {
             "query": "/search?q={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.table-torrents tbody tr')",
@@ -190,7 +196,6 @@
         "base_url": "https://apibay.org",
         "fallback_urls": [],
         "response_type": "json",
-        "owner": "Aki0782",
         "movie": {
             "query": "/q.php?q={query}&cat=207,202,201",
             "keywords": "{title} {year}"
@@ -247,7 +252,10 @@
         },
         "anime": {
             "query": "/search?q={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('table:nth-of-type(2) tbody tr:not(:first-child)')",
@@ -293,7 +301,10 @@
         },
         "anime": {
             "query": "/?s={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('div.full2')",
@@ -341,7 +352,10 @@
         },
         "anime": {
             "query": "/search/?search={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.inner_container')[1].querySelectorAll('.grey_bar3')",
@@ -385,7 +399,10 @@
         },
         "anime": {
             "query": "/usearch/{query}/?field=seeders&sorder=desc",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.data tbody tr:not(.firstr)')",
@@ -429,7 +446,10 @@
         },
         "anime": {
             "query": "/torrents.php?search={query}",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.tgxtable .tgxtablerow')",
@@ -631,7 +651,10 @@
         },
         "anime": {
             "query": "/search/{query}/0/?sort=popular",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.card-body .media')",
@@ -657,14 +680,13 @@
         ],
         "base_url": "http://rutor.info",
         "response_type": "text",
-        "_owner": "Aki0782",
         "movie": {
             "query": "/search/{query}",
             "keywords": "{title} {year}"
         },
         "episode": {
             "query": "/search/{query}",
-            "keywords": "{title} {season}"
+            "keywords": "{title} {episodeCode}"
         },
         "html_parser": {
             "row": "doc.querySelectorAll('tbody tr')",
@@ -701,7 +723,10 @@
         },
         "anime": {
             "query": "",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "json_format": {
             "results": "results",
@@ -746,14 +771,18 @@
             "query": "{\"term\":\"{query}\",\"category\":\"1\"}",
             "keywords": [
                 "{title.it} {seasonCode}",
-                "{title.original} {seasonCode}"
+                "{title.original} {seasonCode}",
+                "{title.it} season",
+                "{title.original} season"
             ]
         },
         "anime": {
             "query": "{\"term\":\"{query}\",\"category\":\"7\"}",
             "keywords": [
-                "{title.it} {episodeCode}",
-                "{title.original} {episodeCode}"
+                "{title.it} {absoluteNumber}",
+                "{title.original} {absoluteNumber}",
+                "{title.it} {episode}",
+                "{title.original} {episode}"
             ]
         },
         "json_format": {
@@ -792,7 +821,10 @@
         },
         "anime": {
             "query": "/?f=0&c=1_0&q={query}&s=seeders&o=desc",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "separator": "+",
         "html_parser": {
@@ -818,7 +850,6 @@
         "base_url": "https://nyaa.si",
         "fallback_urls": [],
         "response_type": "text",
-        "_owner": "Aki0782",
         "movie": {
             "query": "/?f=0&c=0_0&q={query}&s=seeders&o=desc",
             "keywords": "{title} {year}"
@@ -836,7 +867,10 @@
         },
         "anime": {
             "query": "/?f=0&c=0_0&q={query}&s=seeders&o=desc",
-            "keywords": "{title} {episode}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "separator": "+",
         "html_parser": {
@@ -876,11 +910,17 @@
         },
         "season": {
             "query": "/search/tv/{query}/seeds/1/",
-            "keywords": "{title} {seasonCode}"
+            "keywords": [
+                "{title} {seasonCode}",
+                "{title} season"
+            ]
         },
         "anime": {
             "query": "/search/anime/{query}/seeds/1/",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('.table2 tbody tr:nth-child(n+2)')",
@@ -923,7 +963,9 @@
             "query": "/argh.php?search={query}",
             "keywords": [
                 "{title.it} {seasonCode}",
-                "{title.original} {seasonCode}"
+                "{title.original} {seasonCode}",
+                "{title.it} season",
+                "{title.original} season"
             ]
         },
         "html_parser": {
@@ -975,7 +1017,10 @@
         },
         "anime": {
             "query": "/category-search/{query}/Anime/1/",
-            "keywords": "{title} {episode}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "separator": "+",
         "html_parser": {
@@ -1018,7 +1063,10 @@
         },
         "anime": {
             "query": "/recherche/{query}",
-            "keywords": "{title} {episode}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "separator": "%20",
         "html_parser": {
@@ -1063,7 +1111,10 @@
         },
         "anime": {
             "query": "/torrents/?search={query}&c100=1&c700=1&qualityvideo=0&audiolanguage=0&subtitle=0&imdbrating=0",
-            "keywords": "{title} {absoluteNumber}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "html_parser": {
             "row": "doc.querySelectorAll('tr.impar')",
@@ -1101,7 +1152,10 @@
         },
         "anime": {
             "query": "/search?q={query}",
-            "keywords": "{title} {episode}"
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
         },
         "separator": "+",
         "html_parser": {
