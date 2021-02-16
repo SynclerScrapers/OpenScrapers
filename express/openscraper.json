@@ -213,6 +213,13 @@
                 "{title} season"
             ]
         },
+        "anime": {
+            "query": "/q.php?q={query}&cat=208,205",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
         "json_format": {
             "title": "name",
             "seeds": "seeders",
@@ -379,7 +386,16 @@
             "en"
         ],
         "base_url": "https://kickass-kat.com",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://kickass.vc",
+            "https://kat.how",
+            "https://kat.li",
+            "https://kickass.cm",
+            "https://kickass2.st",
+            "https://kat.sx",
+            "https://thekat.info",
+            "https://kickass.unblocked.llc"
+        ],
         "response_type": "text",
         "separator": "%20",
         "movie": {
@@ -426,7 +442,10 @@
             "en"
         ],
         "base_url": "https://torrentgalaxy.to",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://torrentgalaxy.org",
+            "https://torrentgalaxy.pw"
+        ],
         "response_type": "text",
         "separator": "+",
         "movie": {
@@ -529,6 +548,13 @@
                 "{title} season"
             ]
         },
+        "anime": {
+            "query": "/?search={query}&sort=seeders",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
         "html_parser": {
             "row": "doc.querySelectorAll('tbody .result')",
             "title": "row.querySelector('td:nth-child(1) a').textContent",
@@ -624,8 +650,8 @@
             "\"": ""
         }
     },
-    "btscene": {
-        "name": "btscene",
+    "btdb": {
+        "name": "BTDB",
         "enabled": true,
         "languages": [
             "en"
