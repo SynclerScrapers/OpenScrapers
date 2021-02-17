@@ -91,6 +91,58 @@
             "size": "(row.querySelector('.size').textContent < 120 ? row.querySelector('.size').textContent * 1024 : (row.querySelector('.size').textContent > 122880 ? row.querySelector('.size').textContent / 1204  : row.querySelector('.size').textContent))+' MB'",
             "url": "row.querySelector('.magnet-button').getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
+        "title_replacement": {
+            ".": "",
+            ":": "",
+            "'": "",
+            "&": ""
+        }
+    },
+    "extratorrents": {
+        "name": "ExtraTorrent",
+        "enabled": true,
+        "languages": [
+            "en"
+        ],
+        "base_url": "https://extratorrents.it",
+        "fallback_urls": [
+            "https://extratorrent2.unblockninja.com",
+            "https://extratorrent.unblocked.nz",
+            "https://extra.torrentbay.to"
+        ],
+        "response_type": "text",
+        "movie": {
+            "query": "/search/?search={query}&new=1&x=0&y=0",
+            "keywords": "{title} {year}"
+        },
+        "episode": {
+            "query": "/search/?search={query}&new=1&x=0&y=0",
+            "keywords": "{title} {episodeCode}"
+        },
+        "season": {
+            "query": "/search/?search={query}&new=1&x=0&y=0",
+            "keywords": [
+                "{title} {seasonCode}",
+                "{title} season"
+            ]
+        },
+        "anime": {
+            "query": "/search/?search={query}&new=1&x=0&y=0",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
+        "html_parser": {
+            "row": "doc.querySelectorAll('table.tl tbody tr')",
+            "title": "row.querySelector('td.tli > a').textContent",
+            "peers": "row.querySelector('td:nth-child(7)').textContent",
+            "seeds": "row.querySelector('td:nth-child(6)').textContent",
+            "size": "row.querySelector('td:nth-child(5)').textContent",
+            "url": "row.querySelector('table.tl td:nth-child(1) > a').getAttribute('href')"
+        },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -241,7 +293,6 @@
         "base_url": "https://www.torrentdownload.info",
         "response_type": "text",
         "separator": "+",
-        "source_is_in_sub_page": true,
         "movie": {
             "query": "/search?q={query}",
             "keywords": "{title} {year}"
@@ -272,6 +323,7 @@
             "size": "row.querySelector('.tdnormal:nth-of-type(3)').textContent",
             "url": "row.querySelector('.tt-name a').getAttribute('href')"
         },
+        "source_is_in_sub_page": true,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -321,6 +373,7 @@
             "size": "row.querySelector('table tbody tr .torrents_small_size_data1').textContent",
             "url": "row.querySelector('table tbody tr .torrents_small_info_data2 a:nth-child(2)').getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -341,7 +394,6 @@
         ],
         "response_type": "text",
         "separator": "+",
-        "source_is_in_sub_page": true,
         "movie": {
             "query": "/search/?search={query}",
             "keywords": "{title} {year}"
@@ -372,6 +424,7 @@
             "size": "row.querySelector('span:nth-child(5)').textContent",
             "url": "row.querySelector('p a').getAttribute('href').match('http') || row.querySelector('p a').getAttribute('href').match('php') ? null : row.querySelector('p a').getAttribute('href')"
         },
+        "source_is_in_sub_page": true,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -428,6 +481,7 @@
             "size": "row.querySelector('.nobr').textContent",
             "url": "decodeURIComponent(row.querySelector('td:nth-child(1) div:nth-child(1) a:nth-last-child(2)').getAttribute('href').replace('https://mylink.cx/?url=', '').trim())"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -478,6 +532,7 @@
             "size": "row.querySelector('.tgxtablecell:nth-child(8)').textContent",
             "url": "row.querySelector('.tgxtablecell:nth-child(5) a:nth-child(2)').getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -518,6 +573,7 @@
             "size": "row.querySelector('td:nth-child(4)').textContent",
             "url": "row.querySelector('td:nth-child(3) a').getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             "'s": "s",
             "\"": ""
@@ -563,6 +619,7 @@
             "size": "row.querySelector('td:nth-child(2)').textContent",
             "url": "row.querySelectorAll('td:nth-child(1) a')[2].getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -603,6 +660,7 @@
             "size": "row.querySelector('td:nth-child(5)').textContent",
             "url": "row.querySelector('td:nth-child(4) a').getAttribute('href')"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -645,6 +703,7 @@
             "size": "row.querySelector('td:nth-child(6)') ? row.querySelector('td:nth-child(6)').textContent.replace(',','') : ''",
             "url": "row.querySelector('td:nth-child(1) a') ? row.querySelector('td:nth-child(1) a').getAttribute('href') : ''"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             "'s": "s",
             "\"": ""
@@ -721,7 +780,8 @@
             "seeds": "row.querySelector('td:nth-last-child(1) span.red').innerText",
             "size": "row.querySelector('td:nth-last-child(2)').innerText",
             "url": "row.querySelector('td:nth-child(2) a:nth-child(2)').getAttribute('href')"
-        }
+        },
+        "source_is_in_sub_page": false
     },
     "solidtorrents": {
         "name": "SolidTorrents",
@@ -964,6 +1024,47 @@
             "&": ""
         }
     },
+    "torrent9": {
+        "name": "Torrent9",
+        "enabled": true,
+        "languages": [
+            "fr"
+        ],
+        "base_url": "https://torrent9.to",
+        "fallback_urls": [],
+        "response_type": "text",
+        "movie": {
+            "query": "/search_torrent/{query}.html",
+            "keywords": [
+                "{title.fr}",
+                "{title}"
+            ]
+        },
+        "episode": {
+            "query": "/search_torrent/{query}.html",
+            "keywords": "{title} {episodeCode}"
+        },
+        "season": {
+            "query": "/search_torrent/{query}.html",
+            "keywords": [
+                "{title} {seasonCode}",
+                "{title} season"
+            ]
+        },
+        "html_parser": {
+            "row": "doc.querySelectorAll('.table-responsive tr')",
+            "title": "row.querySelector('td:nth-child(1) a').textContent",
+            "peers": "row.querySelector('td:nth-child(4)').textContent",
+            "seeds": "row.querySelector('td:nth-child(3)').textContent",
+            "size": "row.querySelector('td:nth-child(2)').textContent",
+            "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+        },
+        "source_is_in_sub_page": true,
+        "title_replacement": {
+            "'s": "s",
+            "\"": ""
+        }
+    },
     "ilcorsaronero": {
         "name": "IlCorsaroNero",
         "enabled": false,
@@ -997,11 +1098,12 @@
         "html_parser": {
             "row": "doc.querySelectorAll('tr.odd, tr.odd2')",
             "title": "row.querySelector('td:nth-child(2)').textContent",
-            "peers": "row.querySelector('td:nth-child(7 )').textContent",
+            "peers": "row.querySelector('td:nth-child(7)').textContent",
             "seeds": "row.querySelector('td:nth-child(6)').textContent",
             "size": "row.querySelector('td:nth-child(3)').textContent",
             "url": "'magnet:?xt=urn:btih:'+ row.querySelector('input').value"
         },
+        "source_is_in_sub_page": false,
         "title_replacement": {
             "'s": "s",
             "\"": ""
@@ -1069,7 +1171,7 @@
         "languages": [
             "fr"
         ],
-        "base_url": "https://www.oxtorrent.com",
+        "base_url": "https://oxtorrent.ws",
         "fallback_urls": [],
         "response_type": "text",
         "movie": {
@@ -1294,6 +1396,55 @@
         "title_replacement": {
             "'s": "s",
             "\"": ""
+        }
+    },
+    "yourbittorrent": {
+        "name": "YourBitTorrent",
+        "enabled": true,
+        "languages": [
+            "en"
+        ],
+        "base_url": "https://yourbittorrent.com",
+        "fallback_urls": [
+            "https://yourbittorrent2.com"
+        ],
+        "response_type": "text",
+        "movie": {
+            "query": "/?v=&c=1&q={query}",
+            "keywords": "{title} {year}"
+        },
+        "episode": {
+            "query": "/?v=&c=3&q={query}",
+            "keywords": "{title} {episodeCode}"
+        },
+        "season": {
+            "query": "/?v=&c=3&q={query}",
+            "keywords": [
+                "{title} {seasonCode}",
+                "{title} season"
+            ]
+        },
+        "anime": {
+            "query": "/?v=&c=&q={query}",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
+        "html_parser": {
+            "row": "doc.querySelectorAll('tr.table-default')",
+            "title": "row.querySelector('td:nth-child(2)').textContent",
+            "peers": "row.querySelector('td:nth-child(6)').textContent",
+            "seeds": "row.querySelector('td:nth-child(7)').textContent",
+            "size": "row.querySelector('td:nth-child(4)').textContent",
+            "url": "row.querySelector('td:nth-child(3) a:nth-child(3)').getAttribute('href')"
+        },
+        "source_is_in_sub_page": false,
+        "title_replacement": {
+            "&": "",
+            "'": "",
+            ".": "",
+            ":": ""
         }
     },
     "AniDex": {
