@@ -628,7 +628,7 @@
         }
     },
     "glodls": {
-        "name": "GloDls",
+        "name": "glodls",
         "enabled": true,
         "languages": [
             "en"
