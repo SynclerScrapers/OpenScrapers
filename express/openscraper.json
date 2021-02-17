@@ -54,7 +54,7 @@
         }
     },
     "bitlord": {
-        "name": "bitlord",
+        "name": "Bitlord",
         "enabled": true,
         "languages": [
             "en"
@@ -132,7 +132,7 @@
         }
     },
     "zooqle": {
-        "name": "zooqle",
+        "name": "Zooqle",
         "enabled": true,
         "languages": [
             "en"
@@ -188,7 +188,7 @@
         }
     },
     "thepiratebay": {
-        "name": "The Pirate Bay",
+        "name": "PirateBay",
         "enabled": true,
         "languages": [
             "en"
@@ -233,7 +233,7 @@
         }
     },
     "torrentdownload": {
-        "name": "torrentdownload",
+        "name": "TorrentDownload",
         "enabled": true,
         "languages": [
             "en"
@@ -329,7 +329,7 @@
         }
     },
     "torrentdownloads": {
-        "name": "torrentdownloads",
+        "name": "TorrentDownloads",
         "enabled": true,
         "languages": [
             "en"
@@ -380,7 +380,7 @@
         }
     },
     "kickass": {
-        "name": "kickass",
+        "name": "Kickass",
         "enabled": true,
         "languages": [
             "en"
@@ -436,7 +436,7 @@
         }
     },
     "torrentgalaxy": {
-        "name": "torrentgalaxy",
+        "name": "TorrentGalaxy",
         "enabled": true,
         "languages": [
             "en"
@@ -524,7 +524,7 @@
         }
     },
     "skytorrents": {
-        "name": "skytorrents",
+        "name": "SkyTorrents",
         "enabled": true,
         "languages": [
             "en"
@@ -571,7 +571,7 @@
         }
     },
     "glodls": {
-        "name": "glodls",
+        "name": "GloDls",
         "enabled": true,
         "languages": [
             "en"
@@ -724,7 +724,7 @@
         }
     },
     "solidtorrents": {
-        "name": "solidtorrents",
+        "name": "SolidTorrents",
         "enabled": true,
         "languages": [
             "en"
@@ -822,7 +822,7 @@
         }
     },
     "nyaa": {
-        "name": "Nyaa (anime)",
+        "name": "Nyaa",
         "enabled": true,
         "languages": [
             "en"
@@ -914,7 +914,7 @@
         }
     },
     "limetorrents": {
-        "name": "limetorrents",
+        "name": "LimeTorrents",
         "enabled": true,
         "languages": [
             "en"
@@ -1064,7 +1064,7 @@
         }
     },
     "oxtorrent": {
-        "name": "oxtorrent",
+        "name": "OxTorrent",
         "enabled": true,
         "languages": [
             "fr"
@@ -1110,7 +1110,7 @@
         }
     },
     "pirateiro": {
-        "name": "pirateiro",
+        "name": "Pirateiro",
         "enabled": true,
         "languages": [
             "en"
@@ -1153,7 +1153,7 @@
         "source_is_in_sub_page": false
     },
     "7torr": {
-        "name": "7torr",
+        "name": "SevenTorrents",
         "enabled": true,
         "languages": [
             "en"
