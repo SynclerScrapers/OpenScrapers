@@ -1392,7 +1392,7 @@
             "size": "row.querySelector('.ts').textContent",
             "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
         },
-        "source_is_in_sub_page": false,
+        "source_is_in_sub_page": true,
         "title_replacement": {
             "'s": "s",
             "\"": ""
