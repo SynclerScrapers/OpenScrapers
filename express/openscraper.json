@@ -2,7 +2,7 @@
   "_manifest" : {
     "name": "OpenScrapers - Express",
     "id": "openscraper.express",
-    "version": 2,
+    "version": 3,
     "classPath": "",
     "permaUrl": "https://raw.githubusercontent.com/SynclerScrapers/OpenScrapers/main/express/openscraper.json"
   },
@@ -111,7 +111,7 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://extratorrents.it",
+        "base_url": "https://extratorrent.st",
         "fallback_urls": [
             "https://extratorrent2.unblockninja.com",
             "https://extratorrent.unblocked.nz",
@@ -470,8 +470,7 @@
             "https://kickass.cm",
             "https://kickass2.st",
             "https://kat.sx",
-            "https://thekat.info",
-            "https://kickass.unblocked.llc"
+            "https://thekat.info"
         ],
         "response_type": "text",
         "separator": "%20",
@@ -523,8 +522,9 @@
         ],
         "base_url": "https://torrentgalaxy.to",
         "fallback_urls": [
-            "https://torrentgalaxy.org",
-            "https://torrentgalaxy.pw"
+            "https://torrentgalaxy.mx",
+            "https://torrentgalaxy.su",
+            "https://torrentgalaxy.unblockit.uno"
         ],
         "response_type": "text",
         "separator": "+",
@@ -574,12 +574,12 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://eztv.io",
+        "base_url": "https://eztv.re",
         "fallback_urls": [
-            "https://eztv.re",
             "https://eztv.ag",
             "https://eztv.it",
-            "https://eztv.ch"
+            "https://eztv.ch",
+            "https://eztv.unblockit.uno"
         ],
         "response_type": "text",
         "episode": {
@@ -617,39 +617,39 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://www.skytorrents.to",
+        "base_url": "https://www.skytorrents.me",
         "fallback_urls": [],
         "response_type": "text",
-        "separator": "%20",
+        "separator": "+",
         "movie": {
-            "query": "/?search={query}&sort=seeders",
+            "query": "/search?q={query}",
             "keywords": "{title} {year}"
         },
         "episode": {
-            "query": "/?search={query}&sort=seeders",
+            "query": "/search?q={query}",
             "keywords": "{title} {year} {episodeCode}"
         },
         "season": {
-            "query": "/?search={query}&sort=seeders",
+            "query": "/search?q={query}",
             "keywords": [
                 "{title} {year} {seasonCode}",
                 "{title} {year} season"
             ]
         },
         "anime": {
-            "query": "/?search={query}&sort=seeders",
+            "query": "/search?q={query}",
             "keywords": [
                 "{title} {absoluteNumber}",
                 "{title} {episode}"
             ]
         },
         "html_parser": {
-            "row": "doc.querySelectorAll('tbody .result')",
+            "row": "doc.querySelectorAll('.rtable tbody tr.row')",
             "title": "row.querySelector('td:nth-child(1) a').textContent",
-            "peers": "row.querySelector('td:nth-child(6)').textContent",
-            "seeds": "row.querySelector('td:nth-child(5)').textContent",
+            "peers": "row.querySelector('td:nth-child(5)').textContent",
+            "seeds": "row.querySelector('td:nth-child(4)').textContent",
             "size": "row.querySelector('td:nth-child(2)').textContent",
-            "url": "row.querySelectorAll('td:nth-child(1) a')[2].getAttribute('href')"
+            "url": "row.querySelector('td:nth-child(6) a').getAttribute('href')"
         },
         "source_is_in_sub_page": false,
         "title_replacement": {
@@ -668,7 +668,10 @@
             "en"
         ],
         "base_url": "https://glodls.to",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://gtdb.to",
+            "https://glotorrents.unblockit.uno"
+        ],
         "response_type": "text",
         "separator": "+",
         "movie": {
@@ -712,6 +715,7 @@
         ],
         "base_url": "https://www.magnetdl.com",
         "fallback_urls": [
+            "https://magnetdl.unblockit.uno",
             "https://torrentquest.com"
         ],
         "response_type": "text",
@@ -738,56 +742,6 @@
             "seeds": "row.querySelector('td:nth-child(7)') ? row.querySelector('td:nth-child(7)').textContent : ''",
             "size": "row.querySelector('td:nth-child(6)') ? row.querySelector('td:nth-child(6)').textContent.replace(',','') : ''",
             "url": "row.querySelector('td:nth-child(1) a') ? row.querySelector('td:nth-child(1) a').getAttribute('href') : ''"
-        },
-        "source_is_in_sub_page": false,
-        "title_replacement": {
-            ".": "",
-            ":": "",
-            "'": "",
-            "&": "",
-            "\"": "",
-            "*": ""
-        }
-    },
-    "btdb": {
-        "name": "BTDB",
-        "enabled": true,
-        "languages": [
-            "en"
-        ],
-        "base_url": "https://btdb.eu",
-        "fallback_urls": [],
-        "response_type": "text",
-        "separator": "%20",
-        "movie": {
-            "query": "/search/{query}/0/?sort=popular",
-            "keywords": "{title} {year}"
-        },
-        "episode": {
-            "query": "/search/{query}/0/?sort=popular",
-            "keywords": "{title} {year} {episodeCode}"
-        },
-        "season": {
-            "query": "/search/{query}/0/?sort=popular",
-            "keywords": [
-                "{title} {year} {seasonCode}",
-                "{title} {year} season"
-            ]
-        },
-        "anime": {
-            "query": "/search/{query}/0/?sort=popular",
-            "keywords": [
-                "{title} {absoluteNumber}",
-                "{title} {episode}"
-            ]
-        },
-        "html_parser": {
-            "row": "doc.querySelectorAll('.card-body .media')",
-            "title": "row.querySelector('.media-body .item-title').textContent",
-            "peers": "row.querySelector('.item-meta-info small:nth-child(4) strong').textContent",
-            "seeds": "row.querySelector('.item-meta-info small:nth-child(3) strong').textContent",
-            "size": "row.querySelector('.item-meta-info small:nth-child(1) strong').textContent",
-            "url": "row.querySelector('.media-right a:nth-child(1)').getAttribute('href')"
         },
         "source_is_in_sub_page": false,
         "title_replacement": {
@@ -872,57 +826,6 @@
             "&": "",
             "\"": "",
             "*": ""
-        }
-    },
-    "corsarored": {
-        "name": "Corsaro.red",
-        "enabled": true,
-        "languages": [
-            "it"
-        ],
-        "base_url": "https://corsaro.red/api/search",
-        "response_type": "json",
-        "http_method": "POST",
-        "movie": {
-            "query": "{\"term\":\"{query}\",\"category\":\"2\"}",
-            "keywords": [
-                "{title.it} {year}",
-                "{title.original} {year}"
-            ]
-        },
-        "episode": {
-            "query": "{\"term\":\"{query}\",\"category\":\"1\"}",
-            "keywords": [
-                "{title.it} {year} {episodeCode}",
-                "{title.original} {year} {episodeCode}"
-            ]
-        },
-        "season": {
-            "query": "{\"term\":\"{query}\",\"category\":\"1\"}",
-            "keywords": [
-                "{title.it} {year} {seasonCode}",
-                "{title.original} {year} {seasonCode}",
-                "{title.it} {year} season",
-                "{title.original} {year} season"
-            ]
-        },
-        "anime": {
-            "query": "{\"term\":\"{query}\",\"category\":\"7\"}",
-            "keywords": [
-                "{title.it} {absoluteNumber}",
-                "{title.original} {absoluteNumber}",
-                "{title.it} {episode}",
-                "{title.original} {episode}"
-            ]
-        },
-        "json_format": {
-            "results": "results",
-            "url": "magnet",
-            "title": "title",
-            "seeds": "seeders",
-            "peers": "leechers",
-            "size": "size",
-            "quality": "description"
         }
     },
     "nyaa": {
@@ -1031,10 +934,15 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://www.limetorrents.info",
+        "base_url": "https://www.limetorrents.pro",
         "fallback_urls": [
             "https://www.limetorrents.asia",
-            "https://www.limetorrents.zone"
+            "https://www.limetorrents.zone",
+            "https://www.limetorrents.co",
+            "https://www.limetor.com",
+            "https://www.limetor.pro",
+            "https://www.limetorrents.info",
+            "https://limetorrents.unblockit.uno"
         ],
         "response_type": "text",
         "separator": "-",
@@ -1130,7 +1038,10 @@
             "it"
         ],
         "base_url": "http://ilcorsaronero.link",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://ilcorsaronero.pro",
+            "https://ilcorsaronero.fun"
+        ],
         "response_type": "text",
         "separator": "+",
         "movie": {
@@ -1180,14 +1091,10 @@
         "base_url": "https://1337x.to",
         "fallback_urls": [
             "https://1337x.st",
-            "https://1337x.is",
-            "https://1337x.am",
             "https://x1337x.ws",
             "https://x1337x.eu",
             "https://x1337x.se",
-            "https://1337x.unblocked.llc",
-            "https://1337x.unblocker.cc",
-            "https://1337x.unblockall.org"
+            "https://1337x.unblockit.uno"
         ],
         "response_type": "text",
         "movie": {
@@ -1237,7 +1144,7 @@
         "languages": [
             "fr"
         ],
-        "base_url": "https://oxtorrent.ws",
+        "base_url": "https://oxtorrent.pe",
         "fallback_urls": [],
         "response_type": "text",
         "movie": {
@@ -1289,7 +1196,7 @@
         ],
         "base_url": "http://pirateiro.com",
         "fallback_urls": [
-            "https://pirateiro.unblocked.nz"
+            "https://pirateiro.unblockit.uno"
         ],
         "response_type": "text",
         "movie": {
@@ -1331,7 +1238,9 @@
             "en"
         ],
         "base_url": "http://7torr.com",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://seventorrents.unblockit.uno"
+        ],
         "response_type": "text",
         "movie": {
             "query": "/search?q={query}",
@@ -1357,7 +1266,7 @@
         },
         "separator": "+",
         "html_parser": {
-            "row": "doc.querySelectorAll('tbody tr')",
+            "row": "doc.querySelectorAll('tbody tr.row')",
             "title": "row.querySelector('td:nth-child(1) .rtitle a').textContent",
             "peers": "row.querySelector('td:nth-child(5)').textContent",
             "seeds": "row.querySelector('td:nth-child(4)').textContent",
@@ -1434,7 +1343,9 @@
             "en"
         ],
         "base_url": "https://www.torlock.com",
-        "fallback_urls": [],
+        "fallback_urls": [
+            "https://torlock.unblockit.uno"
+        ],
         "response_type": "text",
         "movie": {
             "query": "/movie/torrents/{query}.html?",
@@ -1468,57 +1379,6 @@
             "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
         },
         "source_is_in_sub_page": true,
-        "title_replacement": {
-            ".": "",
-            ":": "",
-            "'": "",
-            "&": "",
-            "\"": "",
-            "*": ""
-        }
-    },
-    "yourbittorrent": {
-        "name": "YourBitTorrent",
-        "enabled": true,
-        "languages": [
-            "en"
-        ],
-        "base_url": "https://yourbittorrent.com",
-        "fallback_urls": [
-            "https://yourbittorrent2.com"
-        ],
-        "response_type": "text",
-        "movie": {
-            "query": "/?v=&c=1&q={query}",
-            "keywords": "{title} {year}"
-        },
-        "episode": {
-            "query": "/?v=&c=3&q={query}",
-            "keywords": "{title} {year} {episodeCode}"
-        },
-        "season": {
-            "query": "/?v=&c=3&q={query}",
-            "keywords": [
-                "{title} {year} {seasonCode}",
-                "{title} {year} season"
-            ]
-        },
-        "anime": {
-            "query": "/?v=&c=&q={query}",
-            "keywords": [
-                "{title} {absoluteNumber}",
-                "{title} {episode}"
-            ]
-        },
-        "html_parser": {
-            "row": "doc.querySelectorAll('tr.table-default')",
-            "title": "row.querySelector('td:nth-child(2)').textContent",
-            "peers": "row.querySelector('td:nth-child(6)').textContent",
-            "seeds": "row.querySelector('td:nth-child(7)').textContent",
-            "size": "row.querySelector('td:nth-child(4)').textContent",
-            "url": "row.querySelector('td:nth-child(3) a:nth-child(3)').getAttribute('href')"
-        },
-        "source_is_in_sub_page": false,
         "title_replacement": {
             ".": "",
             ":": "",
