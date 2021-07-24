@@ -2,7 +2,7 @@
   "_manifest" : {
     "name": "OpenScrapers - Express",
     "id": "openscraper.express",
-    "version": 3,
+    "version": 4,
     "classPath": "",
     "permaUrl": "https://raw.githubusercontent.com/SynclerScrapers/OpenScrapers/main/express/openscraper.json"
   },
@@ -1102,7 +1102,7 @@
             "keywords": "{title} {year}"
         },
         "episode": {
-            "query": "  ",
+            "query": "/sort-category-search/{query}/TV/size/desc/1/",
             "keywords": "{title} {year} {episodeCode}"
         },
         "season": {
