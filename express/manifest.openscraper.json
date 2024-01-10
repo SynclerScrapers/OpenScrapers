@@ -1,0 +1,7 @@
+{
+  "name": "OpenScrapers - Express",
+  "id": "openscraper.express",
+  "version": 6,
+  "url": "https://raw.githubusercontent.com/SynclerScrapers/OpenScrapers/main/express/openscraper.json",
+  "type": "express"
+}
